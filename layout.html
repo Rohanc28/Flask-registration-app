@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="static/login-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Index</title>
+  </head>
+  <style>
+    body {
+      background-image: linear-gradient(
+        135deg,
+        rgb(20, 46, 140),
+        rgb(76, 231, 245)
+      );
+      background-repeat: no-repeat;
+      background-size: 1920px 1080px;
+    }
+    h1 {
+      margin: 40px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue,
+        Arial, Noto Sans;
+      font-size: 4rem;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    h2 {
+      margin: 30px;
+    }
+    #login-box {
+      max-width: 450px;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -65%);
+
+      background-color: rgba(255, 255, 255, 1);
+      border: 4px solid rgba(255, 255, 255, 1);
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 5px 10px 15px 2px rgb(0, 0, 0);
+    }
+  </style>
+  <body>
+    <h1>Sports Tournament</h1>
+
+    <div id="login-box">{%block body%}{%endblock%}</div>
+  </body>
+</html>
