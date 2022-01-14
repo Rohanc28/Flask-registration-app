@@ -1,4 +1,4 @@
-# Flask-registration-app
+# [ATREIDES] Flask-registration-app
 Flask registration project.
 
 To run type in terminal - flask run 
