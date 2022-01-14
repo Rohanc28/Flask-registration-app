@@ -17,10 +17,7 @@ def read_log(file="log_1.txt"):
     f = open(file, 'r')
     print(f.readlines())
     f.close()
+    
 # def clear_log():
 
 # def create_log():
-
-
-#write_log("Rohan", "Chaturvedi", "brohxnc@gmail.com", "Cricket", "log_1.txt")
-# read_log()
