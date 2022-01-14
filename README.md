@@ -2,6 +2,8 @@
 Flask registration project.
 
 To run type in terminal - flask run 
+
+
 if that doesn't work try - python -m flask run
 
 ## Contents
