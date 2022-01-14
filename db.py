@@ -33,13 +33,10 @@ def get_name(connection, first_name):
     with connection:
         return connection.execute(get_user, [first_name]).fetchall()
 
-#get_user = "SELECT * FROM registrants WHERE first_name AND last_name = ?,?;"
-
 
 def get_user_name(connection, first_name, last_name):
     with connection:
         return connection.execute(get_user, [first_name, last_name]).fetchall()
-# DELETE FROM registrants WHERE first_name = ?;"
 
 
 def drop_user_name(connection, first_name, last_name):
@@ -52,7 +49,3 @@ def sport_list(connection, sport):
         return connection.execute(get_sport, [sport]).fetchall()
 
 
-#alter = "DESCRIBE registrants;"
-#connection = connect()
-# with connection:
-#    print(connection.execeute(alter).fetchall())
