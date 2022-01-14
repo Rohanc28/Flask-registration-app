@@ -5,9 +5,9 @@ menu_prompt = """\n\n--- Sports Tournament ---
 Welcome to Sports Tournament, please register if you have not!
 
 1) Register
-2) Find registrant detail by name
-3) Find registratns for specific sport
-4) See all registrants
+2) Find registrant(s) detail by name
+3) Find registrant(s) for specific sport
+4) See all registrant(s)
 5) Deregister User
 6) Exit
 
