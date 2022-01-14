@@ -24,3 +24,9 @@ if that doesn't work try - python -m flask run
 - Improving CSS for all pages
 - reducing file sizes for web-pages.
 - prevent SQLi (SQL injection from user)
+
+### Screenshots:
+![image](https://user-images.githubusercontent.com/81807980/149501855-724a63dd-3807-4d18-9855-ad3d0bb96ed7.png)
+![image](https://user-images.githubusercontent.com/81807980/149502154-610b664f-cce1-4547-bfc1-198a02b7e973.png)
+
+
