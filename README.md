@@ -6,7 +6,7 @@ To run type in terminal - flask run
 
 if that doesn't work try - python -m flask run
 
-## Emailer.py error:
+### Emailer.py error:
 ( Please do not use your work, main account for this),
 
 
