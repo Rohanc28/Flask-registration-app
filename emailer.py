@@ -1,9 +1,13 @@
 import smtplib
 from email.message import EmailMessage
 
-#   html for successfull registration t=1
-#   html for deregistering t=2
-# ? html for announcement ?t=3
+#   html for successfull registration temp=1
+#   html for deregistering temp=2
+# ? html for announcement ?temp=3
+
+
+EMAIL_ADDRESS = ''
+EMAIL_PASSWORD = ''
 
 
 def temp_1(rec, subject):
@@ -367,7 +371,8 @@ def temp_1(rec, subject):
 
 def temp_2(rec, subject):
 
-    
+    # coming soon!
+    # coming soon!
 
     msg = EmailMessage()
     msg["Subject"] = subject
@@ -385,9 +390,3 @@ def sendmail(rec, subject, template):
     else:
         temp_2(rec, subject)
 
-
-rec = "brohxnc@gmail.com"
-subject = "Registration Successful"
-temp = 1
-
-temp_1(rec, subject)
