@@ -6,6 +6,16 @@ To run type in terminal - flask run
 
 if that doesn't work try - python -m flask run
 
+## Emailer.py error:
+( Please do not use your work, main account for this),
+
+
+Have a side account preferably gmail. Remove Phone sign-in, 2-Step Verify from the email you will be sending email as. Turn on Less Secure app access, can be found under Google>myaccount.google.com>security.
+
+
+Go to emailer.py and add EMAIL_ADDRESS = 'your_email' and EMAIL_PASSWORD = 'your email password' and it should work.
+
+
 ## Contents
 - templates - contains all html pages and stylesheets. (still developing)
 - app.py - main flask app. to run.
