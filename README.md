@@ -28,12 +28,11 @@ Go to emailer.py and add EMAIL_ADDRESS = 'your_email' and EMAIL_PASSWORD = 'your
 - tester.py - program to test, debug other programs, scripts (only for debug use, to be ignored)
 
 ## Next updates (coming)
-- Adding unique user only (remove duplicates of same person) from database.
-- Adding page for user to deregister (and then send email to confirm deregistration)
-- Adding page to see all listed players for a/all sport(s).
-- Improving CSS for all pages
-- reducing file sizes for web-pages.
-- prevent SQLi (SQL injection from user)
+- Adding user-login system (using password hashing for security)  [Implementing]
+- ^ cont.d, Add user password reset / recovery system.
+- Adding page for user to deregister (and then send email to confirm deregistration)  [Implementing]
+- Adding page to see all listed players for all sport(s).  [Added]
+- Adding Index page [Added]
 
 ### Screenshots:
 ![image](https://user-images.githubusercontent.com/81807980/149501855-724a63dd-3807-4d18-9855-ad3d0bb96ed7.png)
@@ -42,6 +41,7 @@ Go to emailer.py and add EMAIL_ADDRESS = 'your_email' and EMAIL_PASSWORD = 'your
 ![image](https://user-images.githubusercontent.com/81807980/149508042-60680256-1c32-4805-9fa4-e6417c323e44.png)
 ![image](https://user-images.githubusercontent.com/81807980/149503427-103738bb-89b5-4586-9807-f9d42f74ecd7.png)
 ![image](https://user-images.githubusercontent.com/81807980/149503416-174a3e3e-39d4-4bba-ba46-8dd79c8fd092.png)
+![image](https://user-images.githubusercontent.com/81807980/149793593-59edb2ab-ff41-4405-8805-bbb114a34f7f.png)
 ![image](https://user-images.githubusercontent.com/81807980/149502154-610b664f-cce1-4547-bfc1-198a02b7e973.png)
 
 
