@@ -35,13 +35,15 @@ Go to emailer.py and add EMAIL_ADDRESS = 'your_email' and EMAIL_PASSWORD = 'your
 - Adding Index page [Added]
 
 ### Screenshots:
-![image](https://user-images.githubusercontent.com/81807980/149501855-724a63dd-3807-4d18-9855-ad3d0bb96ed7.png)
-![image](https://user-images.githubusercontent.com/81807980/149740742-dce19f3c-c732-41e0-8c32-d1ca191acfe7.png)
+![image](https://user-images.githubusercontent.com/81807980/149794399-ba00725d-29c7-4cee-991c-5e6c24710ad8.png)
+![image](https://user-images.githubusercontent.com/81807980/149794551-d1b60408-5f68-48b6-ada1-2dd85c6b986a.png)
+
 
 ![image](https://user-images.githubusercontent.com/81807980/149508042-60680256-1c32-4805-9fa4-e6417c323e44.png)
-![image](https://user-images.githubusercontent.com/81807980/149503427-103738bb-89b5-4586-9807-f9d42f74ecd7.png)
+![image](https://user-images.githubusercontent.com/81807980/149794829-2cc4452e-4ff2-4d86-903a-192c076790ce.png)
+
 ![image](https://user-images.githubusercontent.com/81807980/149503416-174a3e3e-39d4-4bba-ba46-8dd79c8fd092.png)
-![image](https://user-images.githubusercontent.com/81807980/149793593-59edb2ab-ff41-4405-8805-bbb114a34f7f.png)
+![image](https://user-images.githubusercontent.com/81807980/149794929-be49ff99-9e86-4804-a310-5d75457106da.png)
 ![image](https://user-images.githubusercontent.com/81807980/149502154-610b664f-cce1-4547-bfc1-198a02b7e973.png)
 
 
