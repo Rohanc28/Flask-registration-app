@@ -35,7 +35,8 @@ Go to emailer.py and add EMAIL_ADDRESS = 'your_email' and EMAIL_PASSWORD = 'your
 - Adding Index page [Added]
 
 ### Screenshots:
-![image](https://user-images.githubusercontent.com/81807980/149794399-ba00725d-29c7-4cee-991c-5e6c24710ad8.png)
+![image](https://user-images.githubusercontent.com/81807980/149989561-3ff198bd-2dc0-4afb-8180-1599772e6449.png)
+
 ![image](https://user-images.githubusercontent.com/81807980/149794551-d1b60408-5f68-48b6-ada1-2dd85c6b986a.png)
 
 
