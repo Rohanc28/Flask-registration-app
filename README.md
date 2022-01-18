@@ -1,10 +1,25 @@
 # [ATREIDES] Flask-registration-app
 Flask registration project.
 
-To run type in terminal - flask run 
+### How to run
+Download the repo and pip install these libraries (if you have not installed them before)
 
+- sqlite3
+- bcrypt
+- flask
+- smtplib
 
-if that doesn't work try - python -m flask run
+Now you can open terminal and run the app by
+```
+flask run
+```
+
+OR 
+
+```
+python -m flask run
+```
+
 
 ### Emailer.py error:
 ( Please do not use your work, main account for this),
