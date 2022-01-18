@@ -4,10 +4,10 @@ Flask registration project.
 ### How to run
 Download the repo and pip install these libraries (if you have not installed them before)
 
-- sqlite3
-- bcrypt
-- flask
-- smtplib
+- sqlite3 (for database management)
+- bcrypt (for password-hashing function)
+- flask 
+- smtplib (to send email to "user" on registration/deregistration )
 
 Now you can open terminal and run the app by
 ```
