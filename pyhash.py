@@ -45,5 +45,3 @@ def reset_hash(user_email, password):
     #
     db.reset_pass(connection, user_email, hash)
     return True
-
-
