@@ -47,9 +47,3 @@ def reset_hash(user_email, password):
     return True
 
 
-#fname = "Rohan"
-#lname = "chat"
-#user_email = "bro@g.com"
-#sport = "Cricket"
-#password = "Rohan123@"
-#make_hash(fname, lname, user_email, sport, password)
