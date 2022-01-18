@@ -1,4 +1,14 @@
 
+###########
+
+
+
+# Is broken (not updated)
+# Doesnt work with newer table.
+# Was a debuggin tool / Not related to working of main app.
+
+
+##########
 import db
 menu_prompt = """\n\n--- Sports Tournament ---
 
