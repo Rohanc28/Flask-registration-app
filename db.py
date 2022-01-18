@@ -1,12 +1,15 @@
 import sqlite3
 
 # queries
-create_new_table = "CREATE TABLE IF NOT EXISTS registrants (id INTEGER PRIMARY KEY, first_name  TEXT, last_name TEXT, email TEXT, sport TEXT);"
-insert_user = "INSERT INTO registrants (first_name, last_name, email, sport) VALUES(?,?,?,?) ;"
+create_new_table = "CREATE TABLE IF NOT EXISTS registrants (id INTEGER PRIMARY KEY, first_name  TEXT, last_name TEXT, email TEXT, sport TEXT, password TEXT, CONSTRAINT mail_unique UNIQUE(email));"
+insert_user = "INSERT OR IGNORE INTO registrants (first_name, last_name, email, sport, password) VALUES(?,?,?,?,?) ;"
 get_all_users = "SELECT first_name,last_name,email,sport FROM registrants;"
 get_user = "SELECT * FROM registrants WHERE first_name LIKE ? AND last_name LIKE ?;"
 get_sport = "SELECT DISTINCT * FROM registrants WHERE sport = ?;"
-drop_user = "DELETE FROM registrants WHERE first_name Like ? AND last_name LIKE ?;"
+get_mail = "SELECT DISTINCT * FROM registrants WHERE email = ?;"
+drop_user = "DELETE FROM registrants WHERE first_name Like ? AND email LIKE ?;"
+update_pass = "UPDATE registrants SET password = ? WHERE email = ?;"
+check_exist = "SELECT COUNT(*) FROM old_registrants WHERE (email = ?) ;"
 
 
 def connect():
@@ -18,10 +21,10 @@ def create_table(connection):
         connection.execute(create_new_table)
 
 
-def add_user(connection, first_name, last_name, email, sport):
+def add_user(connection, first_name, last_name, email, sport, password):
     with connection:
-        return connection.execute(insert_user, [
-            first_name, last_name, email, sport])
+        connection.execute(insert_user, [
+            first_name, last_name, email, sport, password])
 
 
 def get_all(connection):
@@ -29,22 +32,24 @@ def get_all(connection):
         return connection.execute(get_all_users).fetchall()
 
 
-def get_name(connection, first_name):
+def get_pass(connection, email):
     with connection:
-        return connection.execute(get_user, [first_name]).fetchall()
+        return connection.execute(get_mail, [email]).fetchall()
 
-#get_user = "SELECT * FROM registrants WHERE first_name AND last_name = ?,?;"
+
+def reset_pass(connection, email, password):
+    with connection:
+        connection.execute(update_pass, [password, email])
 
 
 def get_user_name(connection, first_name, last_name):
     with connection:
         return connection.execute(get_user, [first_name, last_name]).fetchall()
-# DELETE FROM registrants WHERE first_name = ?;"
 
 
-def drop_user_name(connection, first_name, last_name):
+def drop_user_name(connection, first_name, email):
     with connection:
-        connection.execute(drop_user, [first_name, last_name])
+        connection.execute(drop_user, [first_name, email])
 
 
 def sport_list(connection, sport):
@@ -52,7 +57,15 @@ def sport_list(connection, sport):
         return connection.execute(get_sport, [sport]).fetchall()
 
 
-#alter = "DESCRIBE registrants;"
-#connection = connect()
-# with connection:
-#    print(connection.execeute(alter).fetchall())
+def if_exists(connection, email):
+    with connection:
+        a = connection.execute(check_exist, [email]).fetchall()
+        if a == [(0,)]:  # == "[(0,)]":
+            return True
+        else:
+            return False
+    # if it returns >0 then it exists.
+
+
+# to run sqlite on terminal, type sqlite3 data.db
+# enter query like select * from registrants;
