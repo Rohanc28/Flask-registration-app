@@ -43,8 +43,8 @@ Go to emailer.py and add EMAIL_ADDRESS = 'your_email' and EMAIL_PASSWORD = 'your
 ![image](https://user-images.githubusercontent.com/81807980/149508042-60680256-1c32-4805-9fa4-e6417c323e44.png)
 ![image](https://user-images.githubusercontent.com/81807980/149794829-2cc4452e-4ff2-4d86-903a-192c076790ce.png)
 
-![image](https://user-images.githubusercontent.com/81807980/149503416-174a3e3e-39d4-4bba-ba46-8dd79c8fd092.png)
-![image](https://user-images.githubusercontent.com/81807980/149794929-be49ff99-9e86-4804-a310-5d75457106da.png)
+![image](https://user-images.githubusercontent.com/81807980/149503416-174a3e3e-39d4-4bba-ba46-8dd79c8fd092.png)![image](https://user-images.githubusercontent.com/81807980/149989938-986a7eaf-03cd-46b0-a86f-bf965e5e5e56.png)
+
 ![image](https://user-images.githubusercontent.com/81807980/149502154-610b664f-cce1-4547-bfc1-198a02b7e973.png)
 ![image](https://user-images.githubusercontent.com/81807980/149795777-ac8f5491-6e1a-4787-a111-0c6fef0c499b.png)
 
