@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Login-Atreides</title>
+      <meta name="description" content="" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <!--<link rel="stylesheet" href="static/login-login.css" />-->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+        rel="stylesheet"
+      />
+    </head>
+    <style>
+      :root {
+        --main-bg-color: darkgrey;
+        --dark-bg-color: grey;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: var(--main-bg-color);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+        /*
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(252, 176, 69, 1) 100%
+        );
+        */
+        background-image: linear-gradient(
+          135deg,
+          rgb(20, 46, 140),
+          rgb(76, 231, 245)
+        );
+        /*
+        background-image: url("https://images.unsplash.com/photo-1554042317-efd62f19bc95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHNjaG9vbHxlbnwwfHwwfHw%3D&auto=format");
+        /*
+          background-image: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80");
+          */
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      nav {
+        width: 100%;
+        background-image: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.9),
+          rgba(255, 255, 255, 0.01),
+          white
+        );
+        background-color: rgba(255, 255, 255, 0.9);
+        display: flex;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        justify-content: space-around;
+        font-weight: 600;
+        z-index: 5;
+      }
+
+      .logo {
+        margin-left: 40px;
+        margin-right: auto;
+        font-family: "Montserrat", sans-serif;
+        padding: 17px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 30px;
+        transition: all 0.2s ease-in;
+        background-image: linear-gradient(
+          50deg,
+          rgb(6, 61, 241),
+          rgb(0, 195, 255)
+        );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      }
+      .logo :hover {
+      }
+
+      nav .nav-bar {
+        padding: 7px;
+        display: flex;
+      }
+
+      nav .nav-bar .nav-bar_item {
+        list-style-type: none;
+        padding: 0px 20px;
+      }
+
+      nav .nav-bar .nav-bar_item a {
+        position: relative;
+        display: block;
+        padding-bottom: 5px;
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+        transition: all 0.1s ease-in;
+      }
+
+      nav .nav-bar .nav-bar_item a:after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        color: white;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(
+          90deg,
+          rgb(6, 61, 241),
+          rgb(0, 195, 255)
+        );
+        transition: 0.1s ease-in-out;
+      }
+
+      nav .nav-bar .nav-bar_item :hover {
+        color: black;
+      }
+
+      nav .nav-bar .nav-bar_item a:hover:after {
+        width: 100%;
+        color: black;
+      }
+
+      .btn button {
+        background-image: linear-gradient(144deg, white, grey);
+        position: relative;
+        display: flex;
+        margin: 10px;
+        padding: 13px;
+        border-radius: 30px;
+        right: 1em;
+
+        text-transform: uppercase;
+        transition: all 0.1s ease-in;
+        transition-duration: 0.4s;
+      }
+      .btn button :hover {
+        background-color: #4caf50; /* Green */
+        color: var(--main-bg-color);
+      }
+
+      #login-box {
+        max-width: 350px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 0px solid rgba(255, 255, 255, 1);
+        border-radius: 20px;
+        padding: 15px;
+        box-shadow: 5px 10px 15px 2px rgb(0, 0, 0);
+      }
+      /*------------------------------------------------------------------*/
+      h2 {
+        text-align: center;
+        padding-top: 0px;
+        padding-bottom: 45px;
+        color: white;
+        font-size: 36px;
+        font-weight: 600;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        letter-spacing: 1px;
+      }
+
+      #login-box #username-box {
+        text-align: center;
+        padding: 1px 30px;
+        box-sizing: border-box;
+      }
+
+      #username {
+        text-align: center;
+        padding: 9px 30px;
+        border: 2px solid rgb(255, 255, 255);
+        margin: 5px 5px 10px 5px;
+        border-radius: 30px;
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+
+      #f_name {
+        text-align: center;
+        padding: 9px 30px;
+        border: 3px solid rgb(255, 255, 255);
+        margin: 5px 5px 10px 5px;
+        border-radius: 30px;
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+      #l_name {
+        text-align: center;
+        padding: 9px 30px;
+        border: 3px solid rgb(255, 255, 255);
+        margin: 5px 5px 10px 5px;
+        border-radius: 30px;
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+      #pass-box {
+        text-align: center;
+        padding: 5px 30px;
+        box-sizing: border-box;
+      }
+      #password {
+        text-align: center;
+        padding: 9px 30px;
+        border: 3px solid rgb(255, 255, 255);
+        margin: 5px 5px 10px 5px;
+        border-radius: 30px;
+        font-size: 18px;
+        letter-spacing: 1px;
+
+        transition: 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      #forgot {
+        text-align: center;
+        padding: 1px 1px 40px 0px;
+        box-sizing: border-box;
+        color: rgb(255, 255, 255);
+      }
+      #forgot a {
+        color: #fcfcfc;
+        font-size: 19px;
+        text-decoration: none;
+      }
+      .submit {
+        margin-top: 20px;
+        position: relative;
+        padding: 15px 55px;
+        width: auto;
+        border: 0px solid white;
+        border-radius: 10px;
+        font-size: 20px;
+        color: white;
+        background-color: rgb(33, 109, 209);
+        cursor: pointer;
+        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        top: 50%;
+        left: 50%;
+
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      .submit:hover {
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+
+        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      #signup {
+        text-align: center;
+        margin-top: 9px;
+        box-sizing: border-box;
+      }
+
+      #signup a {
+        color: #ffffff;
+        font-size: 19px;
+        text-decoration: none;
+      }
+
+      #signup a:hover {
+        text-decoration: underline;
+      }
+      ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: rgb(12, 85, 180);
+        opacity: 1; /* Firefox */
+      }
+
+      :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: rgb(12, 85, 180);
+      }
+
+      ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: rgb(12, 85, 180);
+      }
+      /*------------------------------------------------------------------*/
+
+      #foot {
+        width: 100%;
+        height: 6em;
+        background-color: black;
+        position: fixed;
+        bottom: 0;
+        list-style-type: none;
+        text-align: center;
+      }
+      #foot .foot-ul {
+        padding: 10px 0px;
+      }
+
+      #foot .foot-ul .foot-ul-li {
+        display: inline;
+        padding: 0 2rem;
+      }
+
+      #foot .foot-ul .foot-ul-li a {
+        color: grey;
+        font-size: 15px;
+        text-decoration: none;
+      }
+
+      #foot .foot-ul .foot-ul-li a:nth-child(3) {
+        color: grey;
+        font-size: 15px;
+        text-decoration: none;
+        text-align: right;
+      }
+      #foot .foot-ul-li a:hover {
+        text-decoration: underline;
+        color: white;
+      }
+
+      #foot .foot-ul:nth-child(3) {
+        padding: 10px 0px;
+      }
+    </style>
+    <body>
+      <nav>
+        <a class="logo" href="#">Atreides.</a>
+        <ul class="nav-bar">
+          <li class="nav-bar_item">
+            <a href="file:///C:/Users/asus/Desktop/HTML/login_site/home.html"
+              >Home</a
+            >
+          </li>
+          <li class="nav-bar_item"><a href="">project</a></li>
+          <li class="nav-bar_item"><a href="">contact</a></li>
+        </ul>
+      </nav>
+      <!---->
+
+      <div id="login-box">
+        <h2>LOGIN</h2>
+
+        <form action="/profile" method="post">
+          <div id="username-box">
+            <input
+              placeholder="Enter Email"
+              type="text"
+              autocomplete="off"
+              id="username"
+              name="email"
+              maxlength="30"
+              size="18"
+              required
+            />
+          </div>
+          <div id="pass-box">
+            <input
+              placeholder="Enter Password"
+              type="password"
+              autocomplete="off"
+              id="password"
+              name="password"
+              maxlength="30"
+              size="18"
+              required
+            />
+          </div>
+          <div id="forgot"><a href="#"> Forgot Password? </a></div>
+          <input class="submit" type="submit" value="Login" />
+        </form>
+        <form action="/register" method="post">
+          <div id="signup">
+            Not a member? <a style="cursor: pointer">Sign up</a>
+          </div>
+        </form>
+      </div>
+
+      <!---->
+      <div id="foot">
+        <ul class="foot-ul">
+          <li class="foot-ul-li">
+            <a href="">About</a>
+          </li>
+
+          <li class="foot-ul-li">
+            <a href="#">Support</a>
+          </li>
+          <li class="foot-ul-li">
+            <a href="https://www.linkedin.com/in/rohan-chaturvedi-b64b3b20a/"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </body>
+  </html>
+</html>
