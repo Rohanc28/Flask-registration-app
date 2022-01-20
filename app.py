@@ -104,7 +104,7 @@ def result():
                     f"\n\n{first_name} {last_name}  signed up as  {user_email}  for  {sprt}\n\n")
                 logger.write_log(first_name, last_name, user_email, sprt)
                 add_user(first_name, last_name, user_email, sprt, password)
-                # send_reg_email(user_email)
+                send_reg_email(user_email)
                 return render_template('result.html')
             else:
                 try:
