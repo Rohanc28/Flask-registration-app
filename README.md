@@ -48,6 +48,7 @@ Go to emailer.py and add EMAIL_ADDRESS = 'your_email' and EMAIL_PASSWORD = 'your
 - Adding page for user to deregister (and then send email to confirm deregistration)  [Implementing]
 - Adding page to see all listed players for all sport(s).  [Added]
 - Adding Index page [Added]
+- Fix login page to sign up page error.
 - Uniform CSS theme for all pages [Done]
 
 ### Screenshots:
