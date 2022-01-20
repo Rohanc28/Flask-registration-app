@@ -43,11 +43,12 @@ Go to emailer.py and add EMAIL_ADDRESS = 'your_email' and EMAIL_PASSWORD = 'your
 - tester.py - program to test, debug other programs, scripts (only for debug use, to be ignored)
 
 ## Next updates (coming)
-- Adding user-login system (using password hashing for security)  [Implementing]
-- ^ cont.d, Add user password reset / recovery system.
+- Adding user-login system (using password hashing for security)  [Added]
+- ^ cont.d, Add user password reset / recovery system.  [Starting]
 - Adding page for user to deregister (and then send email to confirm deregistration)  [Implementing]
 - Adding page to see all listed players for all sport(s).  [Added]
 - Adding Index page [Added]
+- Uniform CSS theme for all pages [Done]
 
 ### Screenshots:
 ![image](https://user-images.githubusercontent.com/81807980/149989561-3ff198bd-2dc0-4afb-8180-1599772e6449.png)
