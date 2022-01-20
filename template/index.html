@@ -190,11 +190,11 @@
         display: inline;
         padding: 0px 0px 0px 10px;
         height: auto;
-        width: 200px;
+        width: 230px;
         border-radius: 10px;
         font-size: 22px;
         color: white;
-        background: rgba(255, 255, 255, 0.4);
+
         cursor: pointer;
         transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
@@ -203,11 +203,10 @@
 
         -ms-transform: translate(50%, 50%);
         transform: translate(-50%, 00%);
-        box-shadow: 5px 10px 15px 2px rgb(0, 0, 0);
       }
       .btn {
         float: left;
-        font-size: 17px;
+        font-size: 20px;
         padding: 6px 10px;
         margin: 10px;
         color: white;
@@ -223,10 +222,11 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        background: rgb(0, 123, 255);
+        background-color: rgba(255, 255, 255, 0.1);
         border: 1px solid transparent;
         border-radius: 3px;
         transition: 0.5s ease;
+        box-shadow: 5px 8px 15px 1px rgb(0, 0, 0);
       }
       .btn:focus,
       .btn:active:focus {
@@ -236,11 +236,54 @@
       }
       .btn:hover,
       .btn:focus {
-        background: rgb(0, 105, 217);
+        color: black;
+        background: rgb(220, 220, 220);
         text-decoration: none;
       }
       .btn:active {
-        background: rgb(0, 105, 217);
+        background: rgb(200, 205, 200);
+        outline: 0;
+        -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      }
+      .btn1 {
+        float: left;
+        font-size: 20px;
+        padding: 6px 10px;
+        margin: 10px;
+        color: white;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        white-space: nowrap;
+        align-items: center;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid transparent;
+        border-radius: 3px;
+        transition: 0.5s ease;
+        box-shadow: 5px 8px 15px 1px rgb(0, 0, 0);
+      }
+      .btn1:focus,
+      .btn:active:focus {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+      }
+      .btn1:hover,
+      .btn:focus {
+        color: black;
+        background: rgb(220, 220, 220);
+        text-decoration: none;
+      }
+      .btn1:active {
+        background: rgb(200, 205, 200);
         outline: 0;
         -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
         box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -336,7 +379,7 @@
           <input class="btn" type="submit" value="Sign Up" />
         </form>
         <form action="/login" method="post">
-          <input class="btn" type="submit" value="Log in" />
+          <input class="btn1" type="submit" value="Log In" />
         </form>
       </div>
 
@@ -351,7 +394,11 @@
           <li class="foot-ul-li">
             <a href="#">Support</a>
           </li>
-          <li class="foot-ul-li"><a href="#">Contact</a></li>
+          <li class="foot-ul-li">
+            <a href="https://www.linkedin.com/in/rohan-chaturvedi-b64b3b20a/"
+              >Contact</a
+            >
+          </li>
         </ul>
       </div>
     </body>
