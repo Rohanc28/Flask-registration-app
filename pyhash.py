@@ -23,7 +23,7 @@ def make_hash(fname, lname, user_email, sport, password):
 
 def check_hash(user_email, password):
     p = password.encode('utf-8')
-    
+
     #
     connection = db.connect()
     # do implement db and add values
@@ -31,12 +31,12 @@ def check_hash(user_email, password):
     hhash = hash.encode('utf-8')
 
     if bcrypt.checkpw(p, hhash):
-        print("Match")
+        print("Hash Match!")
         return True
     else:
-        print("Not match")
+        print("Hash did not match!")
         return False
-
+    return False
 # reset - hash new password and insert db
 
 
@@ -52,4 +52,5 @@ def reset_hash(user_email, password):
     #
     db.reset_pass(connection, user_email, hash)
     return True
+
 
