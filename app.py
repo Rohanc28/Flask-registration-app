@@ -39,6 +39,7 @@ def add_user(first_name, last_name, user_email, sprt, password):
 def if_exists(email):
     # returns true if doesnt exists
     connection = db.connect()
+    print(str(db.if_exists(connection, email)))
     return (db.if_exists(connection, email))
 
 
@@ -130,8 +131,22 @@ def login():
 
 @ app.route("/profile", methods=["POST"])
 def profile():
-    return render_template("profle.html")
+    if request.method == 'POST':
+
+        user_email = request.form.get("email")
+        password = request.form.get("password")
+        if(if_exists(user_email)):
+
+            # 1
+            if(pyhash.check_hash(user_email, password)):
+                print(
+                    f"\n\n{user_email}  logged in \n\n")
+                return render_template('/profile.html')
+        error = "Invalid Username/Password"
+        return render_template('login.html', error=error)
+    error = "Invalid Username/Password"
+    return render_template('login.html', error=error)
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
