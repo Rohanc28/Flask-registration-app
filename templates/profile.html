@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Atreides-page</title>
+      <meta name="description" content="" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link
+        rel="stylesheet"
+        href="{{url_for('static',filename='index-style.css')}}"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+      />
+    </head>
+
+    <body>
+      <nav>
+        <a class="logo" href="#">Atreides.</a>
+        <ul class="nav-bar">
+          <li class="nav-bar_item">
+            <a href="{{url_for('index')}}">Home</a>
+          </li>
+          <li class="nav-bar_item">
+            <a href="https://github.com/Rohanc28/Flask-registration-app"
+              >project</a
+            >
+          </li>
+          <li class="nav-bar_item">
+            <a
+              href="https://mail.google.com/mail/u/0/?fs=1&to=idevrutahc@gmail.com&su=SUBJECT&body=BODY&tf=cm"
+              >contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!---->
+      <div id="profile-box">
+        <div class="profile">
+          <img
+            src="{{url_for('static',filename='penguin.jfif')}}"
+            class="profile_image"
+          />
+          <div class="profile_name">{{first_name}} {{last_name}}</div>
+          <div class="profile_email">{{user_email}}</div>
+          <div class="profile_sport">
+            <i class="material-icons">sports_basketball</i> &nbsp;{{sport}}
+          </div>
+          <div class="reg_button">
+            <a href="{{url_for('deregister')}}" class="btn2">Deregister</a>
+          </div>
+        </div>
+      </div>
+
+      <!---->
+      <div id="foot">
+        <ul class="foot-ul">
+          <li class="foot-ul-li">
+            <a href="https://github.com/Rohanc28/Flask-registration-app"
+              >About</a
+            >
+          </li>
+          <li class="foot-ul-li">
+            <a href="#">Support</a>
+          </li>
+          <li class="foot-ul-li">
+            <a href="https://www.linkedin.com/in/rohan-chaturvedi-b64b3b20a/"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </body>
+  </html>
+</html>
