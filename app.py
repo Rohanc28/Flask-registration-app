@@ -1,5 +1,6 @@
 
-from flask import Flask, render_template, request, redirect,  url_for
+from django.http import cookie
+from flask import Flask, render_template, request, redirect,  url_for, flash
 import re
 import db
 import emailer
@@ -7,8 +8,8 @@ import logger
 import pyhash
 
 app = Flask(__name__)
-
-name = "Rohan"
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+cookie_email = ""
 sports = ["Cricket", "Football", "Basketball", "Tennis"]
 
 # ----------------------------------- functions
@@ -43,9 +44,9 @@ def if_exists(email):
     return (db.if_exists(connection, email))
 
 
-def remove_user(first_name, user_email):
+def remove_user(user_email):
     connection = db.connect()
-    db.drop_user_name(connection, first_name, user_email)
+    db.drop_user_name(connection, user_email)
 
 
 def list_all_users():
@@ -81,10 +82,14 @@ def register():
 
 @ app.route("/deregister", methods=["POST"])
 def deregister():
-    fname = request.form.get("first_name")
-    lname = request.form.get("last_name")
-    if id:
-        remove_user()
+    cookie_email = request.args.get('user_email', None)
+    print("\n"+cookie_email+"\n")
+    if not cookie_email or re.search("^\s*$", cookie_email):
+        return render_template('error.html')
+    send_dereg_email(cookie_email)
+    remove_user(cookie_email)
+    flash("You have succesfully Deregistered.")
+    return redirect(url_for('index'))
 
 
 @ app.route("/result", methods=["POST"])
@@ -96,7 +101,7 @@ def result():
         user_email = request.form.get("email")
         sprt = request.form.get("sport")
         password = request.form.get("password")
-
+        cookie_email = user_email
         # checker () to verify user details
         if (checker(first_name, last_name, user_email, sprt)):
             # returns false if bad input
@@ -146,13 +151,14 @@ def profile():
                 first_name = l[0][1]
                 last_name = l[0][2]
                 sport = l[0][4]
+                cookie_email = user_email
                 print(
                     f"\n\n{user_email}  logged in \n\n")
                 return render_template('/profile.html', first_name=first_name, last_name=last_name, user_email=user_email, sport=sport)
-        error = "Invalid Username/Password"
-        return render_template('login.html', error=error)
-    error = "Invalid Username/Password"
-    return render_template('login.html', error=error)
+        else:
+            return render_template('error.html')
+    else:
+        return render_template('login.html')
 
 
 if __name__ == "__main__":
