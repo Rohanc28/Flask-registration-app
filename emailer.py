@@ -735,5 +735,3 @@ def sendmail(rec, subject, template):
         temp_1(rec, subject)
     if(template == 2):
         temp_2(rec, subject)
-
-
