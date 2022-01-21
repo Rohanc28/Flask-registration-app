@@ -63,6 +63,9 @@ def send_dereg_email(user_email):
     emailer.sendmail(user_email, subject, 2)
 
 
+def get_details(user_email):
+    connection = db.connect()
+    return db.get_username(connection, user_email)
 # -----------------------------------routes
 
 
@@ -139,9 +142,13 @@ def profile():
 
             # 1
             if(pyhash.check_hash(user_email, password)):
+                l = get_details(user_email)
+                first_name = l[0][1]
+                last_name = l[0][2]
+                sport = l[0][4]
                 print(
                     f"\n\n{user_email}  logged in \n\n")
-                return render_template('/profile.html')
+                return render_template('/profile.html', first_name=first_name, last_name=last_name, user_email=user_email, sport=sport)
         error = "Invalid Username/Password"
         return render_template('login.html', error=error)
     error = "Invalid Username/Password"
