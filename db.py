@@ -7,7 +7,7 @@ get_all_users = "SELECT first_name,last_name,email,sport FROM registrants;"
 get_user = "SELECT * FROM registrants WHERE email= ?;"
 get_sport = "SELECT DISTINCT * FROM registrants WHERE sport = ?;"
 get_mail = "SELECT DISTINCT password FROM registrants WHERE email = ?;"
-drop_user = "DELETE FROM registrants WHERE first_name Like ? AND email LIKE ?;"
+drop_user = "DELETE FROM registrants WHERE email = ?;"
 update_pass = "UPDATE registrants SET password = ? WHERE email = ?;"
 check_exist = "SELECT COUNT(*) FROM old_registrants WHERE (email = ?) ;"
 
@@ -47,9 +47,9 @@ def get_username(connection, email):
         return connection.execute(get_user, [email]).fetchall()
 
 
-def drop_user_name(connection, first_name, email):
+def drop_user_name(connection, email):
     with connection:
-        connection.execute(drop_user, [first_name, email])
+        connection.execute(drop_user, [email])
 
 
 def sport_list(connection, sport):
@@ -66,6 +66,7 @@ def if_exists(connection, email):
             return False
     # if it returns >0 then it exists.
 
+#alter = "DESCRIBE registrants;"
 
 
 # to run sqlite on terminal, type sqlite3 data.db
