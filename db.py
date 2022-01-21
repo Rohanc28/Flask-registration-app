@@ -4,9 +4,9 @@ import sqlite3
 create_new_table = "CREATE TABLE IF NOT EXISTS registrants (id INTEGER PRIMARY KEY, first_name  TEXT, last_name TEXT, email TEXT, sport TEXT, password TEXT, CONSTRAINT mail_unique UNIQUE(email));"
 insert_user = "INSERT OR IGNORE INTO registrants (first_name, last_name, email, sport, password) VALUES(?,?,?,?,?) ;"
 get_all_users = "SELECT first_name,last_name,email,sport FROM registrants;"
-get_user = "SELECT * FROM registrants WHERE first_name LIKE ? AND last_name LIKE ?;"
+get_user = "SELECT * FROM registrants WHERE email= ?;"
 get_sport = "SELECT DISTINCT * FROM registrants WHERE sport = ?;"
-get_mail = "SELECT DISTINCT * FROM registrants WHERE email = ?;"
+get_mail = "SELECT DISTINCT password FROM registrants WHERE email = ?;"
 drop_user = "DELETE FROM registrants WHERE first_name Like ? AND email LIKE ?;"
 update_pass = "UPDATE registrants SET password = ? WHERE email = ?;"
 check_exist = "SELECT COUNT(*) FROM old_registrants WHERE (email = ?) ;"
@@ -42,9 +42,9 @@ def reset_pass(connection, email, password):
         connection.execute(update_pass, [password, email])
 
 
-def get_user_name(connection, first_name, last_name):
+def get_username(connection, email):
     with connection:
-        return connection.execute(get_user, [first_name, last_name]).fetchall()
+        return connection.execute(get_user, [email]).fetchall()
 
 
 def drop_user_name(connection, first_name, email):
@@ -65,6 +65,7 @@ def if_exists(connection, email):
         else:
             return False
     # if it returns >0 then it exists.
+
 
 
 # to run sqlite on terminal, type sqlite3 data.db
