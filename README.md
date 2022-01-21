@@ -71,4 +71,5 @@ Go to emailer.py and add EMAIL_ADDRESS = 'your_email' and EMAIL_PASSWORD = 'your
 ![image](https://user-images.githubusercontent.com/81807980/149502154-610b664f-cce1-4547-bfc1-198a02b7e973.png)
 ![image](https://user-images.githubusercontent.com/81807980/149795777-ac8f5491-6e1a-4787-a111-0c6fef0c499b.png)
 
+![image](https://user-images.githubusercontent.com/81807980/150552327-2621f00a-12e0-414a-b638-f667183c8eec.png)
 
