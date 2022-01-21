@@ -45,6 +45,7 @@ Go to emailer.py and add EMAIL_ADDRESS = 'your_email' and EMAIL_PASSWORD = 'your
 ## Next updates (coming)
 - Adding user-login system (using password hashing for security)  [Added]
 - ^ cont.d, Add user password reset / recovery system.  [Starting]
+- Profile page for user  [Added]
 - Adding page for user to deregister (and then send email to confirm deregistration)  [Implementing]
 - Adding page to see all listed players for all sport(s).  [Added]
 - Adding Index page [Added]
@@ -58,6 +59,7 @@ Go to emailer.py and add EMAIL_ADDRESS = 'your_email' and EMAIL_PASSWORD = 'your
 ![image](https://user-images.githubusercontent.com/81807980/150362135-55edfb58-18b6-4cb4-a51c-51445cad4290.png)
 
 
+![image](https://user-images.githubusercontent.com/81807980/150514739-c4b4ed16-687b-4e1d-9bc3-66031c409de8.png)
 
 ![image](https://user-images.githubusercontent.com/81807980/149794829-2cc4452e-4ff2-4d86-903a-192c076790ce.png)
 
