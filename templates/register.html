@@ -1,0 +1,53 @@
+
+  {%extends "layout.html"%}{%block body%}
+  <div class="container" >
+
+        <form action="/result" method="post">
+          <div class="form-group">
+
+            <div class="form-group">
+              <label >First Name</label>
+              <input autofocus name="first_name" type="text" class="form-control"  required placeholder="Enter First Name">
+              <br>
+           
+            <div class="form-group">
+              <label >Last Name</label>
+              <input autofocus name="last_name"type="text" class="form-control"  required placeholder="Enter Last Name">
+              
+              <br>
+
+            <div class="form-group">
+              <label >Email address</label>
+              <input autofocus name="email"type="email" class="form-control" required placeholder="Enter Email">
+              
+                <br>
+            
+            
+            <div class="form-group">
+              <label >Password</label>
+              <input autofocus name="password"type="password" class="form-control" required placeholder="Enter Password">
+              
+
+            <br>
+           
+              <div class="col-auto my-1">
+                <label class="mr-sm-2" for="inlineFormCustomSelect" style="color:black;min-width:100px;">Preference &nbsp;</label>
+                <select name="sport" class="custom-select mr-sm-2" id="inlineFormCustomSelect" >
+                  <option disabled selected>Sport</option>
+                  <option value="Cricket">Cricket</option>
+                  <option value="Basketball">Basketball</option>
+                  <option value="Football">Football</option>
+                  <option value="Tennis">Tennis</option>
+                </select>
+              </div>
+            
+            <br>
+            
+            <div class="text-center">
+            <button type="submit" class="btn btn-primary" value="register" style="color:white;">Register</button>
+            </div>
+          </form>
+
+        </div>
+        {%endblock%}
+      
