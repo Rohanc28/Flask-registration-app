@@ -21,6 +21,9 @@ def read_log(file="log_1.txt"):
 
 # def create_log():
 
+#
+#import emailer
+#emailer.temp_1(user_email, subject)
 
 #write_log("Rohan", "Chaturvedi", "a@b.com", "Cricket", "log_1.txt")
 # read_log()
