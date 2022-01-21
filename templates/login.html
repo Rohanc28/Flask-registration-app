@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Login-Atreides</title>
+      <meta name="description" content="" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link
+        rel="stylesheet"
+        href="{{url_for('static',filename='index-style.css')}}"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+        rel="stylesheet"
+      />
+    </head>
+    <body>
+      <nav>
+        <a class="logo" href="#">Atreides.</a>
+        <ul class="nav-bar">
+          <li class="nav-bar_item">
+            <a href="{{url_for('index')}}">Home</a>
+          </li>
+          <li class="nav-bar_item"><a href="">project</a></li>
+          <li class="nav-bar_item"><a href="">contact</a></li>
+        </ul>
+      </nav>
+      <!---->
+
+      <div id="llogin-box">
+        <h2 class="head-3">LOGIN</h2>
+
+        <form action="/profile" method="post">
+          <div id="username-box">
+            <input
+              placeholder="Enter Email"
+              type="text"
+              autocomplete="off"
+              id="username"
+              name="email"
+              maxlength="30"
+              size="18"
+              required
+            />
+          </div>
+          <div id="pass-box">
+            <input
+              placeholder="Enter Password"
+              type="password"
+              autocomplete="off"
+              id="password"
+              name="password"
+              maxlength="30"
+              size="18"
+              required
+            />
+          </div>
+          <div id="forgot"><a href="#"> Forgot Password? </a></div>
+          <input class="login-submit" type="submit" value="Login" />
+        </form>
+        <form action="/register" method="post">
+          <div id="signup">
+            Not a member?
+            <a style="cursor: pointer" href="{{url_for('register')}}"
+              >Sign up</a
+            >
+          </div>
+        </form>
+      </div>
+
+      <!---->
+      <div id="foot">
+        <ul class="foot-ul">
+          <li class="foot-ul-li">
+            <a href="">About</a>
+          </li>
+
+          <li class="foot-ul-li">
+            <a href="#">Support</a>
+          </li>
+          <li class="foot-ul-li">
+            <a href="https://www.linkedin.com/in/rohan-chaturvedi-b64b3b20a/"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </body>
+  </html>
+</html>
