@@ -65,9 +65,3 @@ def if_exists(connection, email):
         else:
             return False
     # if it returns >0 then it exists.
-
-#alter = "DESCRIBE registrants;"
-
-
-# to run sqlite on terminal, type sqlite3 data.db
-# enter query like select * from registrants;
